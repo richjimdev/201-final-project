@@ -75,3 +75,8 @@ We want to create a safe environment where  everyone feels comfortable speaking 
 4. Display the most popular TA result in a list/chart. 
 5. Create a quiz timer.
 6. Create form to receive user input for name.
+
+## VERSION HISTORY
+
+
+Version 1.0.0 -- Basic functionality and page setup
