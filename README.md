@@ -14,7 +14,7 @@ We will escalate the conflict if any attempts are unsuccessful and when an indiv
 ##  COMMUNICATION PLAN
 
 
-Outside of class hours, we will communicate via Slack. 
+Our team has agreed that it will be optional to work on the project outside of class hours. If anyone opts for this, they will work on their branch and merge only after the  team reviews the work the following morning. Outside of class hours, we will communicate via Slack. 
 We will ensure everyone's voices are heard. After any proposals or questions are posed, we will open up the floor for  	discussions. 
 
 We want to create a safe environment where  everyone feels comfortable speaking up by being constructive in our communication and giving each other our full attention whenever a team member would like to discuss an issue.
