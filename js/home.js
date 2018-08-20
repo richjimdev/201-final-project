@@ -37,69 +37,49 @@ var question7 = new Questions(7, text[6]);
 var question8 = new Questions(8, text[7]);
 var question9 = new Questions(9, text[8]);
 
-// Variables to keep tally of answers that pertain to Staff member
-var staff1counter = 0;
-var staff2counter = 0;
-var staff3counter = 0;
-var staff4counter = 0;
+// constructor for staff member object with name, img, bio, then push to staff array
+function Staff(name, img, bio) {
+  this.name = name;
+  this.img = img;
+  this.bio = bio;
+  staffArray.push(this);
+}
 
-var staff1FinalScore;
-var staff2FinalScore;
-var staff3FinalScore;
-var staff4FinalScore;
+var staffArray = [];
+
+//create staff objects for each staff member
+var michelle = new Staff('Michelle', 'img/#', 'Michelle is your Spirit Animal');
+var justin = new Staff('Justin', 'img/#', 'Justin is your Spirit Animal');
+var joanna = new Staff('Joanna', 'img/#', 'Joanna is your Spirit Animal');
+var suzanne = new Staff('Suzanne', 'img/#', 'Suzanne is your Spirit Animal');
 
 // Event listener for submit button that will tally answers
 document.getElementById('button').addEventListener('click', function() {
+  // Variables to keep tally of answers that pertain to Staff member
   var staff1Answer = 0;
   var staff2Answer = 0;
   var staff3Answer = 0;
   var staff4Answer = 0;
-  
-  if(document.getElementsByClassName('answer1')[0].checked) {
-    staff1Answer++;
-    staff1FinalScore = staff1counter + staff1Answer;
-    console.log(staff1Answer);
-    console.log('a1 checked');
-  } else if(document.getElementsByClassName('answer2')[0].checked) {
-    staff2Answer++;
-    staff2FinalScore = staff2counter + staff2Answer;
-    console.log(staff2Answer);
-    console.log('a2 checked');
-  } else if(document.getElementsByClassName('answer3')[0].checked) {
-    staff3Answer++;
-    staff3FinalScore = staff3counter + staff3Answer;
-    console.log(staff3Answer);
-    console.log('a3 checked');
-  } else {
-    staff4Answer++;
-    staff4FinalScore = staff4counter + staff4Answer;
-    console.log(staff4Answer);
-    console.log('a4 checked');
-  }
 
-  if(document.getElementsByClassName('answer1')[1].checked) {
-    staff1Answer++;
-    staff1FinalScore = staff1counter + staff1Answer;
-    console.log(staff1Answer);
-    console.log('a1 checked');
-  } else if(document.getElementsByClassName('answer2')[1].checked) {
-    staff2Answer++;
-    staff2FinalScore = staff2counter + staff2Answer;
-    console.log(staff2Answer);
-    console.log('a2 checked');
-  } else if(document.getElementsByClassName('answer3')[1].checked) {
-    staff3Answer++;
-    staff3FinalScore = staff3counter + staff3Answer;
-    console.log(staff3Answer);
-    console.log('a3 checked');
-  } else {
-    staff4Answer++;
-    staff4FinalScore = staff4counter + staff4Answer;
-    console.log(staff4Answer);
-    console.log('a4 checked');
+  for (var i = 0; i <= 8; i++) {
+    console.log(`question ${i + 1}`);
+    if(document.getElementsByClassName('answer1')[i].checked) {
+      staff1Answer++;
+      console.log('a1 checked');
+    } else if(document.getElementsByClassName('answer2')[i].checked) {
+      staff2Answer++;
+      console.log('a2 checked');
+    } else if(document.getElementsByClassName('answer3')[i].checked) {
+      staff3Answer++;
+      console.log('a3 checked');
+    } else {
+      staff4Answer++;
+      console.log('a4 checked');
+    }
   }
-  // var finalAnswer = Math.max.apply(Math, staffAnswerArray);
-  // localStorage.setItem('result', JSON.stringify(finalAnswer));
+  //Place answer tallies into new array
+  var staffAnswerArray = [staff1Answer, staff2Answer, staff3Answer, staff4Answer];
+  //Determine which staff had most votes
+  var finalAnswer = staffAnswerArray.indexOf(Math.max.apply(Math, staffAnswerArray));
+  localStorage.setItem('staffWinner', JSON.stringify(staffArray[finalAnswer]));
 });
-
-// var staffAnswerArray = [staff1Answer, staff2Answer, staff3Answer, staff4Answer];
