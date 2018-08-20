@@ -4,14 +4,15 @@ var quizResult;
 
 var answerArray = new Array(8);
 var text = [
-  'Question 1',
-  'Question 2',
-  'Question 3',
-  'Question 4',
-  'Question 5',
-  'Question 6',
-  'Question 7',
-  'Question 8'
+  'Question 1: Which image best describes you?',
+  'Question 2: Which city is your perfect vacation destination?',
+  'Question 3: Which is your favorite food?',
+  'Question 4: What do you want to be when you grow up?',
+  'Question 5: Who is your favorite artist/band/music?',
+  'Question 6: What is your perfect weekend activity?',
+  'Question 7: What is your spirit/favorite animal?',
+  'Question 8: What is your favorite app?',
+  'Question 9: What is your favorite color?'
 ];
 
 function Answers(path, staff, qNum) {
@@ -34,6 +35,7 @@ var question5 = new Questions(5, text[4]);
 var question6 = new Questions(6, text[5]);
 var question7 = new Questions(7, text[6]);
 var question8 = new Questions(8, text[7]);
+var question9 = new Questions(9, text[8]);
 
 document.getElementById('button').addEventListener('click', function() {
   if(document.getElementsByClassName('answer1')[0].checked) {
