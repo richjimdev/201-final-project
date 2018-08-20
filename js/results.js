@@ -1,11 +1,10 @@
 'use strict';
 
 var newResult = JSON.parse(localStorage.getItem('staffWinner'));
-
 console.log(newResult);
 
+//if results are in localstorage display staff information, if not display message of no quiz results yet
 var resultsNode = document.getElementById('resultsDisplay');
-
 if (newResult) {
   var staffName = document.createElement('h1');
   var staffImg = document.createElement('img');

@@ -51,7 +51,7 @@ var staffArray = [];
 var michelle = new Staff('Michelle', 'img/michelle/michelle-portrait.png', 'Michelle is your Spirit Animal');
 var justin = new Staff('Justin', 'img/justin/justin-flexing.gif', 'Justin is your Spirit Animal');
 var joanna = new Staff('Joanna', 'img/joanna/joanna-profile.png', 'Joanna is your Spirit Animal');
-var suzanne = new Staff('Suzanne', 'img/suzanne/suzanna-profile.png', 'Suzanne is your Spirit Animal');
+var suzanne = new Staff('Suzanne', 'img/suzanne/suzanne-profile.png', 'Suzanne is your Spirit Animal');
 
 // Event listener for submit button that will tally answers
 document.getElementById('button').addEventListener('click', function() {
@@ -82,4 +82,6 @@ document.getElementById('button').addEventListener('click', function() {
   //Determine which staff had most votes
   var finalAnswer = staffAnswerArray.indexOf(Math.max.apply(Math, staffAnswerArray));
   localStorage.setItem('staffWinner', JSON.stringify(staffArray[finalAnswer]));
+
+  location.href = 'results.html';
 });
