@@ -48,10 +48,10 @@ function Staff(name, img, bio) {
 var staffArray = [];
 
 //create staff objects for each staff member
-var michelle = new Staff('Michelle', 'img/#', 'Michelle is your Spirit Animal');
-var justin = new Staff('Justin', 'img/#', 'Justin is your Spirit Animal');
-var joanna = new Staff('Joanna', 'img/#', 'Joanna is your Spirit Animal');
-var suzanne = new Staff('Suzanne', 'img/#', 'Suzanne is your Spirit Animal');
+var michelle = new Staff('Michelle', 'img/michelle/michelle-portrait.png', 'Michelle is your Spirit Animal');
+var justin = new Staff('Justin', 'img/justin/justin-flexing.gif', 'Justin is your Spirit Animal');
+var joanna = new Staff('Joanna', 'img/joanna/joanna-profile.png', 'Joanna is your Spirit Animal');
+var suzanne = new Staff('Suzanne', 'img/suzanne/suzanna-profile.png', 'Suzanne is your Spirit Animal');
 
 // Event listener for submit button that will tally answers
 document.getElementById('button').addEventListener('click', function() {
