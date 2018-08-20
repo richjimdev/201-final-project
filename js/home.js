@@ -37,15 +37,69 @@ var question7 = new Questions(7, text[6]);
 var question8 = new Questions(8, text[7]);
 var question9 = new Questions(9, text[8]);
 
+// Variables to keep tally of answers that pertain to Staff member
+var staff1counter = 0;
+var staff2counter = 0;
+var staff3counter = 0;
+var staff4counter = 0;
+
+var staff1FinalScore;
+var staff2FinalScore;
+var staff3FinalScore;
+var staff4FinalScore;
+
+// Event listener for submit button that will tally answers
 document.getElementById('button').addEventListener('click', function() {
+  var staff1Answer = 0;
+  var staff2Answer = 0;
+  var staff3Answer = 0;
+  var staff4Answer = 0;
+  
   if(document.getElementsByClassName('answer1')[0].checked) {
-    quizResult = 'answer1';
+    staff1Answer++;
+    staff1FinalScore = staff1counter + staff1Answer;
+    console.log(staff1Answer);
+    console.log('a1 checked');
   } else if(document.getElementsByClassName('answer2')[0].checked) {
-    quizResult = 'answer2';
+    staff2Answer++;
+    staff2FinalScore = staff2counter + staff2Answer;
+    console.log(staff2Answer);
+    console.log('a2 checked');
   } else if(document.getElementsByClassName('answer3')[0].checked) {
-    quizResult = 'answer3';
+    staff3Answer++;
+    staff3FinalScore = staff3counter + staff3Answer;
+    console.log(staff3Answer);
+    console.log('a3 checked');
   } else {
-    quizResult = 'answer4';
+    staff4Answer++;
+    staff4FinalScore = staff4counter + staff4Answer;
+    console.log(staff4Answer);
+    console.log('a4 checked');
   }
-  localStorage.setItem('result', JSON.stringify(quizResult));
+
+  if(document.getElementsByClassName('answer1')[1].checked) {
+    staff1Answer++;
+    staff1FinalScore = staff1counter + staff1Answer;
+    console.log(staff1Answer);
+    console.log('a1 checked');
+  } else if(document.getElementsByClassName('answer2')[1].checked) {
+    staff2Answer++;
+    staff2FinalScore = staff2counter + staff2Answer;
+    console.log(staff2Answer);
+    console.log('a2 checked');
+  } else if(document.getElementsByClassName('answer3')[1].checked) {
+    staff3Answer++;
+    staff3FinalScore = staff3counter + staff3Answer;
+    console.log(staff3Answer);
+    console.log('a3 checked');
+  } else {
+    staff4Answer++;
+    staff4FinalScore = staff4counter + staff4Answer;
+    console.log(staff4Answer);
+    console.log('a4 checked');
+  }
+  // var finalAnswer = Math.max.apply(Math, staffAnswerArray);
+  // localStorage.setItem('result', JSON.stringify(finalAnswer));
 });
+
+// var staffAnswerArray = [staff1Answer, staff2Answer, staff3Answer, staff4Answer];
