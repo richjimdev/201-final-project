@@ -20,14 +20,16 @@ main {
 }
 
 .question-bubble {
-  background-color: lightslategray;
+  background-color: rgb(130, 157, 184);
   border-radius: 10px;
   padding: 40px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .5);
+  margin: 20px 0;
 }
 
 img {
-  width: 200px;
-  height: 200px; 
+  width: 300px;
+  height: 250px; 
 }
 
 .img-row {
