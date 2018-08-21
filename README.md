@@ -28,27 +28,28 @@ We want to create a safe environment where  everyone feels comfortable speaking 
 1. I want an easy to navigate page to prevent confusing layouts or links.
 2. I want good UI/UX to make my experience enjoyable and easy to understand. 
 3. I want to take a quiz to find out which TA spirit animal I am most like. 
-4. I want to view the quiz results to see which TA I am most similar to. 
+4. I want to view the quiz results to see which TA I am most similar. 
 5. I want to view an ‘About Me’ page about the developers of the page so I can understand their backgrounds. 
+6. I want the results to be based on my selected answers in order to provide the TA I am most like. 
+7. I want a navigation menu that is visible on every page to create a consistent experience.
 
 ### As Developers...
 
-1. We want to utilize CSS styling to produce a visually appealing and easy to understand page. 
-2. We want to write clear, concise and easy-to-read code so that it is easily understood by any developer. 
-3. We want to create an ‘About Me’ page to give fun facts to our users about the developers. 
-4. We want to display 4 images as answers to 8 different questions to gather input from the user.
-5. We want to display 1 question with 4 possible answers at a time to prevent the requirement that a user scroll down to view additional questions. 
-6. We want the results to be saved in localStorage so that the results can be viewed even when leaving the results page. 
-7. We want each image of answers to be clicked to receive user input on his or her answer to the provided question. 
-8. We want to have a profile of each TA to provide results to the user that matches his/her responses to the questions. 
-9. We want the results to be based on the user selected answers to create the quiz that is unique to the responses. 
-10. We want to create a navigation menu that is visible on every page to create a consistent experience.
-11. We want to create an animated side navigation to make the page more appealing and interactive. 
-12. We want to receive user input on the home screen to intake the user’s name to create a personalized experience.
-13. We want to create a timer for the quiz to make a more quality quiz experience.
-14. We want to create the option for more quizzes to allow the user to spend more time on our page. 
-15. We want to create a new page that allows the user to create custom quizzes that can be taken on the page for a higher quality user experience. 
-16. We want to list the frequency of TAs that are provided as results to to keep track of the most common TA result. 
+1. I want to utilize CSS styling to produce a visually appealing and easy to understand page. 
+2. I want to write clear, concise and easy-to-read code so that it is easily understood by any developer. 
+3. I want to create an ‘About Me’ page to give fun facts to our users about the developers. 
+4. I want to display 4 images as answers to 8 different questions to gather input from the user. 
+5. I want the results to be saved in localStorage so that the results can be viewed even when leaving the results page. 
+6. I want each image of answers to be clicked to receive user input on his or her answer to the provided question. 
+7. I want to have a profile of each TA to provide results to the user that matches his/her responses to the questions. 
+8. I want to display maintain and add-on results to the results page in a the form of a table to allow the user to retake the same quiz and view the corresponding results.
+<!--  [Stretch Goals]
+9. I want to create an animated side navigation to make the page more appealing and interactive. 
+10. I want to receive user input on the home screen to intake the user’s name to create a personalized experience.
+11. I want to create a timer for the quiz to make a more quality quiz experience.
+12. I want to create the option for more quizzes to allow the user to spend more time on our page. 
+13. I want to create a new page that allows the user to create custom quizzes that can be taken on the page for a higher quality user experience.
+14. I want to list the frequency of TAs that are provided as results to to keep track of the most common TA result. -->
 
 
 ## MINIMUM VIABLE PRODUCT (MVP)
@@ -79,4 +80,4 @@ We want to create a safe environment where  everyone feels comfortable speaking 
 ## VERSION HISTORY
 
 
-Version 1.0.0 -- Basic functionality and page setup
+Version 2.0.0 -- Working MVP
