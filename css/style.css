@@ -1,31 +1,82 @@
+:root {
+  --red-color:#BC2134;
+  --purple-color:rgb(127, 64, 148);
+  --blue-color: rgb(82, 87, 145);
+  --green-color:#E5FFDE;
+  --yellow-color:#F9FF74;
+  --gray-color:#403D39;
+  --white-color: rgba(148, 182, 253, 0.1);
+}
+
+body {
+  background-color: #ccf2de;
+  background-image: url("../img/dust_scratches.png");
+  background-attachment: fixed;
+}
+
+p {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--gray-color);
+}
+
+h2, p, a {
+  font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--blue-color);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
 header {
-  background-color: rgb(67, 144, 212);
-  /* margin: auto; */
+  background-color: var(--blue-color);
   text-align: center;
   height: 100px;
-  /* overflow: auto; */
+  margin-bottom: 60px;
+  box-shadow: 0px 5px 11px -1px rgba(0, 0, 0, .25);
 }
 
 header div {
   max-width: 960px;
   margin: auto;
-  padding-top: 15px;
+  padding-top: 5px;
 }
 
 .logo {
-  max-width: 230px;
+  max-width: 320px;
   float: left;
 }
 
 header h1 {
   font-family: 'Monofett', cursive;
-  font-size: 30px;
+  font-size: 40px;
   color: white;
   display: inline;
 }
 
 nav {
-  display: block;
+  display: flex;
   float: right;
   margin-top: 50px;
+}
+
+nav a {
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  margin: 0 10px;
+  padding: 15px 15px 10px 15px;
+  color: white;
+}
+
+nav a:hover {
+  background-color: rgb(193, 223, 248);
+}
+
+nav a.active {
+  background-color: rgb(193, 223, 248);
 }
