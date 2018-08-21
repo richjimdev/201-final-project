@@ -5,7 +5,7 @@ var qArr = [];
 var text = [
   'Question 1: Which image best describes you?',
   'Question 2: Which city is your perfect vacation destination?',
-  'Question 3: Which is your favorite food?',
+  'Question 3: What is your favorite food?',
   'Question 4: What do you want to be when you grow up?',
   'Question 5: Who is your favorite artist/band/music?',
   'Question 6: What is your perfect weekend activity?',
@@ -23,7 +23,7 @@ function Answers(descriptor, path, staff) {
 function Questions(text) {
   this.text = text;
   qArr.push(this);
-  qAnswersArr = [];
+  this.qAnswersArr = [];
 }
 
 var question1 = new Questions(text[0]);
@@ -96,7 +96,7 @@ var answer29 = new Answers('Minimal Sudoku', 'img/michelle/minimal-sudoku.png', 
 question8.qAnswersArr.push(answer29);
 var answer30 = new Answers('Amazon', 'img/justin/amazon-logo.png', 'Justin');
 question8.qAnswersArr.push(answer30);
-var answer31 = new Answers('Trello', 'img/joanna/trello.pn', 'Joanna');
+var answer31 = new Answers('Trello', 'img/joanna/trello.png', 'Joanna');
 question8.qAnswersArr.push(answer31);
 var answer32 = new Answers('Netflix', 'img/suzanne/netflix.jpg', 'Suzanne');
 question8.qAnswersArr.push(answer32);
@@ -109,11 +109,35 @@ question9.qAnswersArr.push(answer35);
 var answer36 = new Answers('Gray', 'img/suzanne/gray.jpg', 'Suzanne');
 question9.qAnswersArr.push(answer36);
 
-// function render() {
-//   for (i=0; i < qArr.length; i++) {
-    
-//   }
-// }
+function render() {
+  for (var i = 0; i < qArr.length; i++) {
+    var question = document.getElementsByTagName('h2')[i];
+    question.textContent = qArr[i].text;
+    var michelleImg = document.getElementsByClassName('michelleImg')[i];
+    var michelleText = document.getElementsByClassName('michelleText')[i];
+    var justinImg = document.getElementsByClassName('justinImg')[i];
+    var justinText = document.getElementsByClassName('justinText')[i];
+    var suzanneImg = document.getElementsByClassName('suzanneImg')[i];
+    var suzanneText = document.getElementsByClassName('suzanneText')[i];
+    var joannaImg = document.getElementsByClassName('joannaImg')[i];
+    var joannaText = document.getElementsByClassName('joannaText')[i];
+    for(var j = 0; j < qArr[i].qAnswersArr.length; j++) {
+      if(qArr[i].qAnswersArr[j].staff === 'Michelle') {
+        michelleImg.src = qArr[i].qAnswersArr[j].path;
+        michelleText.textContent = qArr[i].qAnswersArr[j].descriptor;
+      } else if (qArr[i].qAnswersArr[j].staff === 'Justin') {
+        justinImg.src = qArr[i].qAnswersArr[j].path;
+        justinText.textContent = qArr[i].qAnswersArr[j].descriptor;
+      } else if (qArr[i].qAnswersArr[j].staff === 'Suzanne') {
+        suzanneImg.src = qArr[i].qAnswersArr[j].path;
+        suzanneText.textContent = qArr[i].qAnswersArr[j].descriptor;
+      } else if (qArr[i].qAnswersArr[j].staff === 'Joanna') {
+        joannaImg.src = qArr[i].qAnswersArr[j].path;
+        joannaText.textContent = qArr[i].qAnswersArr[j].descriptor;
+      }
+    }
+  }
+}
 
 // constructor for staff member object with name, img, bio, then push to staff array
 function Staff(name, img, bio) {
@@ -141,16 +165,16 @@ document.getElementById('button').addEventListener('click', function() {
 
   for (var i = 0; i <= 8; i++) {
     console.log(`question ${i + 1}`);
-    if(document.getElementsByClassName('answer1')[i].checked) {
+    if(document.getElementsByClassName('michelle')[i].checked) {
       michelleAnswers++;
       console.log('a1 checked');
-    } else if(document.getElementsByClassName('answer2')[i].checked) {
+    } else if(document.getElementsByClassName('justin')[i].checked) {
       justinAnswers++;
       console.log('a2 checked');
-    } else if(document.getElementsByClassName('answer3')[i].checked) {
+    } else if(document.getElementsByClassName('joanna')[i].checked) {
       joannaAnswers++;
       console.log('a3 checked');
-    } else if(document.getElementsByClassName('answer4')[i].checked) {
+    } else if(document.getElementsByClassName('suzanne')[i].checked) {
       suzanneAnswers++;
       console.log('a4 checked');
     } else {
@@ -165,3 +189,5 @@ document.getElementById('button').addEventListener('click', function() {
 
   location.href = 'results.html';
 });
+
+render();
