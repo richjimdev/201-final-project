@@ -1,5 +1,6 @@
 :root {
-  --red-color:#BC2134;
+  --red-color:#853422;
+  --brown-color: #281a14;
   --purple-color:rgb(127, 64, 148);
   --blue-color: rgb(82, 87, 145);
   --green-color:#E5FFDE;
@@ -33,10 +34,9 @@ h2 {
 }
 
 header {
-  background-color: var(--blue-color);
+  background-color: var(--brown-color);
   text-align: center;
   height: 100px;
-  margin-bottom: 60px;
   box-shadow: 0px 5px 11px -1px rgba(0, 0, 0, .25);
 }
 
@@ -53,7 +53,7 @@ header div {
 
 header h1 {
   font-family: 'Monofett', cursive;
-  font-size: 40px;
+  font-size: 30px;
   color: white;
   display: inline;
 }
@@ -78,5 +78,5 @@ nav a:hover {
 }
 
 nav a.active {
-  background-color: rgb(193, 223, 248);
+  background-color: var(--red-color);
 }
