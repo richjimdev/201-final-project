@@ -1,0 +1,31 @@
+header {
+  background-color: rgb(67, 144, 212);
+  /* margin: auto; */
+  text-align: center;
+  height: 100px;
+  /* overflow: auto; */
+}
+
+header div {
+  max-width: 960px;
+  margin: auto;
+  padding-top: 15px;
+}
+
+.logo {
+  max-width: 230px;
+  float: left;
+}
+
+header h1 {
+  font-family: 'Monofett', cursive;
+  font-size: 30px;
+  color: white;
+  display: inline;
+}
+
+nav {
+  display: block;
+  float: right;
+  margin-top: 50px;
+}
