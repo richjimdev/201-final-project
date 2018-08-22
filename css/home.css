@@ -5,10 +5,14 @@ main {
 }
 
 .question-bubble {
-  background-color: rgba(70, 57, 57, 0.363);
+  background-image: url("../img/texture.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(22, 3, 3, 0.753);
+  background-blend-mode: darken;
   border-radius: 10px;
   padding: 40px;
-  box-shadow: 0px 5px 11px -1px rgba(0, 0, 0, .5);
+  box-shadow: 0px 5px 11px -1px rgba(0, 0, 0, 0.678);
   margin: 20px 0;
   width: 880px;
   text-align: center;
@@ -18,7 +22,6 @@ main {
   width: 375px;
   height: 250px; 
   padding: 10px 40px;
-  /* border-radius: 15%; */
 }
 
 .img-row {
@@ -28,7 +31,7 @@ main {
 }
 
 .question-bubble img:hover {
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 .quiz-header {
@@ -60,5 +63,7 @@ label > input + img{
 }
 
 label > input:checked + img{
-  background-color: rgb(128, 100, 100);
+  background-image: url("../img/metalframe.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
