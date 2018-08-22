@@ -90,3 +90,11 @@ button {
   font-size: 2em;
 }
 
+.footnotes {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 12px;
+  background-color:var(--brown-color);
+  padding: 1rem;
+  height: 30px;
+}
