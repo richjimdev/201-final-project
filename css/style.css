@@ -15,6 +15,19 @@ body {
   color: var(--offwhite-color);
 }
 
+.banner {
+  text-align: center;
+  height: 205px;
+  width: 960px;
+  background-image: url("../img/shortbanner.jpg");
+  background-size: cover;
+}
+
+.banner h1 {
+  font-size: 45px;
+  margin-top: 100px;
+}
+
 p {
   font-size: 18px;
   font-weight: bold;
