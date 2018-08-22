@@ -62,3 +62,12 @@ label > input + img{
 label > input:checked + img{
   background-color: rgb(128, 100, 100);
 }
+
+.footnotes {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 12px;
+  background-color:var(--brown-color);
+  padding: 1rem;
+  height: 30px;
+}

@@ -1,0 +1,13 @@
+
+.footnotes {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 12px;
+  background-color:var(--brown-color);
+  height: 30px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+}
