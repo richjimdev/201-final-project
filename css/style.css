@@ -1,28 +1,22 @@
 :root {
   --red-color:#853422;
   --brown-color: #281a14;
-  --purple-color:rgb(127, 64, 148);
-  --blue-color: rgb(82, 87, 145);
-  --green-color:#E5FFDE;
-  --yellow-color:#F9FF74;
-  --gray-color:#403D39;
-  --white-color: rgba(148, 182, 253, 0.1);
+  --lightbrown-color: #c47263;
 }
 
 body {
-  background-color: #ccf2de;
-  background-image: url("../img/dust_scratches.png");
+  background-color: #332323;
+  background-image: url("../img/cosmos.jpg");
   background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
+  font-family: 'Quantico', serif;
 }
 
 p {
   font-size: 18px;
   font-weight: bold;
   color: var(--gray-color);
-}
-
-h2, p, a {
-  font-family: 'Raleway', sans-serif;
 }
 
 h2 {
