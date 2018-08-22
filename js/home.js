@@ -1,7 +1,9 @@
 'use strict';
 
+// Array of question objects
 var qArr = [];
 
+// Array of text for questions
 var text = [
   'Question 1: Which image best describes you?',
   'Question 2: Which city is your perfect vacation destination?',
@@ -14,18 +16,21 @@ var text = [
   'Question 9: What is your favorite color?'
 ];
 
+// Answers constructor
 function Answers(descriptor, path, staff) {
   this.descriptor = descriptor;
   this.path = path;
   this.staff = staff;
 }
 
+// Questions constructor
 function Questions(text) {
   this.text = text;
   qArr.push(this);
   this.qAnswersArr = [];
 }
 
+// Creating question objects
 var question1 = new Questions(text[0]);
 var question2 = new Questions(text[1]);
 var question3 = new Questions(text[2]);
@@ -36,6 +41,7 @@ var question7 = new Questions(text[6]);
 var question8 = new Questions(text[7]);
 var question9 = new Questions(text[8]);
 
+// Creating answer objects
 var answer1 = new Answers('Jumpy Nemo', 'img/michelle/michelle.gif', 'Michelle');
 question1.qAnswersArr.push(answer1);
 var answer2 = new Answers('Flexing Man', 'img/justin/justin-flexing.gif', 'Justin');
@@ -109,6 +115,7 @@ question9.qAnswersArr.push(answer35);
 var answer36 = new Answers('Gray', 'img/suzanne/gray.jpg', 'Suzanne');
 question9.qAnswersArr.push(answer36);
 
+// Render function: puts things on the page
 function render() {
   for (var i = 0; i < qArr.length; i++) {
     var question = document.getElementsByTagName('h2')[i];
@@ -139,7 +146,7 @@ function render() {
   }
 }
 
-// constructor for staff member object with name, img, bio, then push to staff array
+// Constructor for staff member object with name, img, bio, then push to staff array
 function Staff(name, img, bio) {
   this.name = name;
   this.img = img;
@@ -147,16 +154,27 @@ function Staff(name, img, bio) {
   staffArr.push(this);
 }
 
+// Array of staff objects
 var staffArr = [];
 
-//create staff objects for each staff member
+// Create staff objects for each staff member
 var michelle = new Staff('Michelle', 'img/michelle/michelle-portrait.png', 'Michelle is your Spirit Animal');
 var justin = new Staff('Justin', 'img/justin/justin-flexing.gif', 'Justin is your Spirit Animal');
 var joanna = new Staff('Joanna', 'img/joanna/joanna-profile.png', 'Joanna is your Spirit Animal');
 var suzanne = new Staff('Suzanne', 'img/suzanne/suzanne-profile.png', 'Suzanne is your Spirit Animal');
 
+function addLocalStorage(name, value) {
+  var results = JSON.parse(localStorage.getItem(name));
+  if(!results) {
+    results = [];
+  }
+  results.push(value);
+  localStorage.setItem(name, JSON.stringify(results));
+}
+
 // Event listener for submit button that will tally answers
 document.getElementById('button').addEventListener('click', function() {
+  // debugger;
   // Variables to keep tally of answers that pertain to Staff member
   var michelleAnswers = 0;
   var justinAnswers = 0;
@@ -164,29 +182,28 @@ document.getElementById('button').addEventListener('click', function() {
   var suzanneAnswers = 0;
 
   for (var i = 0; i <= 8; i++) {
-    console.log(`question ${i + 1}`);
     if(document.getElementsByClassName('michelle')[i].checked) {
       michelleAnswers++;
-      console.log('a1 checked');
     } else if(document.getElementsByClassName('justin')[i].checked) {
       justinAnswers++;
-      console.log('a2 checked');
     } else if(document.getElementsByClassName('joanna')[i].checked) {
       joannaAnswers++;
-      console.log('a3 checked');
     } else if(document.getElementsByClassName('suzanne')[i].checked) {
       suzanneAnswers++;
-      console.log('a4 checked');
     } else {
       return alert('You must have a selection for each question!');
     }
   }
-  //Place answer tallies into new array
-  var staffAnswerArr = [michelleAnswers, justinAnswers, joannaAnswers, suzanneAnswers];
-  //Determine which staff had most votes
-  var finalAnswer = staffAnswerArr.indexOf(Math.max.apply(Math, staffAnswerArr));
-  localStorage.setItem('staffWinner', JSON.stringify(staffArr[finalAnswer]));
 
+  // Place answer tallies into new array
+  var staffAnswerArr = [michelleAnswers, justinAnswers, joannaAnswers, suzanneAnswers];
+
+  // Determine which staff had most votes
+  var finalAnswer = staffAnswerArr.indexOf(Math.max.apply(Math, staffAnswerArr));
+
+  addLocalStorage('staffWinner', staffArr[finalAnswer]);
+
+  // Automatically redirects to results page
   location.href = 'results.html';
 });
 
