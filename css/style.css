@@ -74,3 +74,27 @@ nav a:hover {
 nav a.active {
   background-color: var(--red-color);
 }
+
+button {
+  background-color: var(--brown-color);
+  border: whitesmoke;
+  border-radius: 5px;
+  color: whitesmoke;
+  margin: 30px 0;
+  max-height: 70px;
+  padding: 0 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Quantico', serif;
+  font-size: 2em;
+}
+
+.footnotes {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 12px;
+  background-color:var(--brown-color);
+  padding: 1rem;
+  height: 30px;
+}
