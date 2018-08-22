@@ -29,9 +29,11 @@ div.titleWrapper {
     align-items: center;
 }
 
-img {
+.resultWrapper img {
     display: block;
     margin:0 auto;
+    width: 400px;
+    border-radius: 10%;
 }
 
 .resultWrapper p {

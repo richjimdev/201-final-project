@@ -21,12 +21,10 @@ main {
 .question-bubble img {
   width: 375px;
   height: 250px; 
-  padding: 10px 40px;
+  padding: 10px 30px;
 }
 
 .img-row {
-  margin: auto;
-  max-width: 900px;
   display: flex; 
 }
 
