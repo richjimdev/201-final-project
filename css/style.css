@@ -19,10 +19,12 @@ p {
   font-size: 18px;
   font-weight: bold;
   color: var(--gray-color);
+  padding: 5px;
 }
 
 h2 {
-  font-size: 25px;
+  text-transform: uppercase;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
   color: var(--blue-color);
@@ -67,6 +69,7 @@ nav a {
   margin: 0 10px;
   padding: 15px 15px 10px 15px;
   color: white;
+  text-transform: uppercase;
 }
 
 nav a:hover {

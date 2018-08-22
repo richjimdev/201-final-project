@@ -5,15 +5,15 @@ var qArr = [];
 
 // Array of text for questions
 var text = [
-  'Question 1: Which image best describes you?',
-  'Question 2: Which city is your perfect vacation destination?',
-  'Question 3: What is your favorite food?',
-  'Question 4: What do you want to be when you grow up?',
-  'Question 5: Who is your favorite artist/band/music?',
-  'Question 6: What is your perfect weekend activity?',
-  'Question 7: What is your spirit/favorite animal?',
-  'Question 8: What is your favorite app?',
-  'Question 9: What is your favorite color?'
+  'Which image best describes you?',
+  'Which city is your perfect vacation destination?',
+  'What is your favorite food?',
+  'What do you want to be when you grow up?',
+  'Who is your favorite band?',
+  'What is your perfect weekend activity?',
+  'What is your spirit animal?',
+  'What is your favorite app?',
+  'What is your favorite color?'
 ];
 
 // Answers constructor
