@@ -7,15 +7,17 @@ console.log(newResult);
 // If results are in localstorage display staff information, if not display message of no quiz results yet
 var resultsNode = document.getElementById('resultsDisplay');
 if (newResult) {
-  var staffName = document.createElement('h1');
-  var staffImg = document.createElement('img');
-  var staffBio = document.createElement('p');
-  staffName.textContent = newResult.name;
-  staffImg.src = newResult.img;
-  staffBio.textContent = newResult.bio;
-  resultsNode.appendChild(staffName);
-  resultsNode.appendChild(staffImg);
-  resultsNode.appendChild(staffBio);
+  for(var i = 0; i < newResult.length; i++) {
+    var staffName = document.createElement('h1');
+    var staffImg = document.createElement('img');
+    var staffBio = document.createElement('p');
+    staffName.textContent = newResult[i].name;
+    staffImg.src = newResult[i].img;
+    staffBio.textContent = newResult[i].bio;
+    resultsNode.appendChild(staffName);
+    resultsNode.appendChild(staffImg);
+    resultsNode.appendChild(staffBio);
+  }
 } else {
   var noResults = document.createElement('h1');
   noResults.textContent = 'No results dummy';

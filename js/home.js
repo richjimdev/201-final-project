@@ -163,8 +163,18 @@ var justin = new Staff('Justin', 'img/justin/justin-flexing.gif', 'Justin is you
 var joanna = new Staff('Joanna', 'img/joanna/joanna-profile.png', 'Joanna is your Spirit Animal');
 var suzanne = new Staff('Suzanne', 'img/suzanne/suzanne-profile.png', 'Suzanne is your Spirit Animal');
 
+function addLocalStorage(name, value) {
+  var results = JSON.parse(localStorage.getItem(name));
+  if(!results) {
+    results = [];
+  }
+  results.push(value);
+  localStorage.setItem(name, JSON.stringify(results));
+}
+
 // Event listener for submit button that will tally answers
 document.getElementById('button').addEventListener('click', function() {
+  // debugger;
   // Variables to keep tally of answers that pertain to Staff member
   var michelleAnswers = 0;
   var justinAnswers = 0;
@@ -172,7 +182,6 @@ document.getElementById('button').addEventListener('click', function() {
   var suzanneAnswers = 0;
 
   for (var i = 0; i <= 8; i++) {
-    console.log(`question ${i + 1}`);
     if(document.getElementsByClassName('michelle')[i].checked) {
       michelleAnswers++;
     } else if(document.getElementsByClassName('justin')[i].checked) {
@@ -191,7 +200,8 @@ document.getElementById('button').addEventListener('click', function() {
 
   // Determine which staff had most votes
   var finalAnswer = staffAnswerArr.indexOf(Math.max.apply(Math, staffAnswerArr));
-  localStorage.setItem('staffWinner', JSON.stringify(staffArr[finalAnswer]));
+
+  addLocalStorage('staffWinner', staffArr[finalAnswer]);
 
   // Automatically redirects to results page
   location.href = 'results.html';
