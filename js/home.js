@@ -158,10 +158,10 @@ function Staff(name, img, bio) {
 var staffArr = [];
 
 // Create staff objects for each staff member
-var michelle = new Staff('Michelle', 'img/michelle/michelle-portrait.png', 'Michelle is your Spirit Animal');
-var justin = new Staff('Justin', 'img/justin/justin-flexing.gif', 'Justin is your Spirit Animal');
-var joanna = new Staff('Joanna', 'img/joanna/joanna-profile.png', 'Joanna is your Spirit Animal');
-var suzanne = new Staff('Suzanne', 'img/suzanne/suzanne-profile.png', 'Suzanne is your Spirit Animal');
+var michelle = new Staff('Michelle', 'img/michelle/michelle-portrait.png', 'You are a coding rockstar that is here to school us all!');
+var justin = new Staff('Justin', 'img/justin/justin-flexing.gif', 'You march to the beat of your own drum, always with a smile on your face.');
+var joanna = new Staff('Joanna', 'img/joanna/joanna-profile.png', 'You are a social butterfly that can find a friend anywhere!');
+var suzanne = new Staff('Suzanne', 'img/suzanne/suzanne-profile.png', 'The cat is out of the bag, you are the adventurous one!');
 
 function addLocalStorage(name, value) {
   var results = JSON.parse(localStorage.getItem(name));

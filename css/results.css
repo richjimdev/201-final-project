@@ -1,1 +1,48 @@
+#resultExplain h1 {
+    font-family: 'Quantico', serif;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
 
+h2 {
+    font-size: 38px;
+}
+div.resultWrapper {
+    background-image: url("../img/texture.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(22, 3, 3, 0.753);
+    background-blend-mode: darken;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0px 5px 11px -1px rgba(0, 0, 0, 0.678);
+    margin: 40px auto;
+    width: 880px;
+    text-align: center;
+
+} 
+
+div.titleWrapper {
+    align-items: center;
+}
+
+img {
+    display: block;
+    margin:0 auto;
+}
+
+.resultWrapper p {
+    font-size: 22px;
+    padding-top:20px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
