@@ -98,7 +98,7 @@ var answer27 = new Answers('German Sheperd', 'img/joanna/german-sheperd.jpg', 'J
 question7.qAnswersArr.push(answer27);
 var answer28 = new Answers('Cat', 'img/suzanne/cat.jpg', 'Suzanne');
 question7.qAnswersArr.push(answer28);
-var answer29 = new Answers('Minimal Sudoku', 'img/michelle/minimal-sudoku.png', 'Michelle');
+var answer29 = new Answers('Minimal Sudoku', 'img/michelle/minimal-sudoku.JPG', 'Michelle');
 question8.qAnswersArr.push(answer29);
 var answer30 = new Answers('Amazon', 'img/justin/amazon-logo.png', 'Justin');
 question8.qAnswersArr.push(answer30);
