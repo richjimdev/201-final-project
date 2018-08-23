@@ -32,11 +32,9 @@ h2 {
     font-size: 38px;
 }
 div.resultWrapper {
-    background-image: url("../img/texture.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: rgba(22, 3, 3, 0.753);
-    background-blend-mode: darken;
+    background-color: rgba(247, 216, 216, 0.322);
     border-radius: 10px;
     padding: 40px;
     box-shadow: 0px 5px 11px -1px rgba(0, 0, 0, 0.678);
@@ -53,7 +51,7 @@ div.titleWrapper {
     display: block;
     margin:0 auto;
     width: 400px;
-    border-radius: 10%;
+    border-radius: 5%;
 }
 
 .resultWrapper p {
