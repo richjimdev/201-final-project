@@ -31,8 +31,8 @@ function renderResult() {
     resultTitle.classList.add('titleWrapper');
 
     var staffName = document.createElement('h2');
-    var ecks = document.createElement('span');
-    ecks.textContent = 'Click here to remove';
+    var ecks = document.createElement('button');
+    ecks.textContent = 'Remove';
     ecks.classList.add('remover');
     ecks.id = i;
 

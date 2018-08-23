@@ -108,6 +108,10 @@ button {
   font-size: 2em;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .footnotes {
   text-align: center;
   color: whitesmoke;
