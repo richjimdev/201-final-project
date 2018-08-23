@@ -35,6 +35,7 @@ function renderResult() {
     ecks.textContent = 'Remove';
     ecks.classList.add('remover');
     ecks.id = i;
+    ecks.addEventListener('click', removeQuizResult);
 
     var staffImg = document.createElement('img');
     var staffBio = document.createElement('p');
@@ -49,10 +50,6 @@ function renderResult() {
     resultWrapper.appendChild(staffBio);
   }
 }
-
-// Selects element to add quiz results to
-var resultsNode = document.getElementById('resultsDisplay');
-resultsNode.addEventListener('click', removeQuizResult);
 
 // If results are in localstorage display staff information, if not display message of no quiz results yet
 if (newResult) {
