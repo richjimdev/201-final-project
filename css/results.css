@@ -19,7 +19,7 @@
     width: 960px;
     background-image: url("../img/shortbanner.jpg");
     background-size: cover;
-    margin: 0;
+    margin: 0 auto 30px auto;
   }
   
 #resultExplain h1 {
@@ -86,14 +86,6 @@ div.titleWrapper {
 
 .retake {
     display: block;
-    text-align: center;
-}
-
-footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
     text-align: center;
 }
 

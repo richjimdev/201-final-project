@@ -51,6 +51,9 @@ function renderResult() {
   }
 }
 
+// Selects element to add quiz results to
+var resultsNode = document.getElementById('resultsDisplay');
+
 // If results are in localstorage display staff information, if not display message of no quiz results yet
 if (newResult) {
   var resultExplain = document.createElement('h1');
