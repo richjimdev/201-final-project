@@ -66,3 +66,14 @@ footer {
     width: 100%;
     text-align: center;
 }
+
+button {
+    font-size:14px;
+    background-color: var(--offwhite-color);
+    color: var(--red-color);
+    padding: 4px 13px;
+}
+
+button:hover {
+    opacity: 0.45;
+}
