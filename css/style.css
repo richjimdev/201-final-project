@@ -111,7 +111,13 @@ button {
 
 button:hover {
   cursor: pointer;
+  background-color: gray;
 }
+
+/* button:hover {
+  cursor: pointer;
+  background-color: gray;
+} */
 
 .footnotes {
   text-align: center;
