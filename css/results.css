@@ -69,11 +69,12 @@ footer {
     text-align: center;
 }
 
-button {
+button.remover {
     font-size:14px;
     background-color: var(--offwhite-color);
     color: var(--red-color);
     padding: 4px 13px;
+    margin: 0 0 12px 0;
 }
 
 button:hover {
