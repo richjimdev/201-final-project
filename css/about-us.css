@@ -1,3 +1,7 @@
+.banner {
+  margin-bottom: 10px;
+}
+
 .about-us-wrapper {
   display: flex;
   flex-direction: column;
@@ -10,7 +14,8 @@
   width: 960px;
   align-items: center;
   border: 10px solid var(--brown-color);
-
+  max-height: 398px;
+  padding-top: 2px;
 }
 
 .info-wrapper {
