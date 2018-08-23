@@ -59,6 +59,10 @@ div.titleWrapper {
     padding-top:20px;
 }
 
+a button {
+    margin-left: 45%;
+}
+
 footer {
     position: relative;
     left: 0;

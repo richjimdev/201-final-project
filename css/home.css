@@ -55,7 +55,10 @@ button:hover {
 }
 
 input {
-  display: none;
+  /* z-index: -1; */
+  position: absolute;
+  margin: 50px 0px 0px 50px;
+  opacity: 0;
 }
 
 label > input + img{
