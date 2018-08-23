@@ -27,7 +27,10 @@
 
 .info-wrapper p {
   max-width: 600px;
-  padding: 0 120px 25px 120px; 
+  padding: 0 55px 25px 55px;
+  line-height: 28px;
+  text-align: left;
+  color:white;
 }
 
 .about-us-section2 img {
