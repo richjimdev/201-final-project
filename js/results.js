@@ -3,7 +3,7 @@
 // Get result from local storage
 var newResult = JSON.parse(localStorage.getItem('staffWinner'));
 
-// Removes item from local storage
+// Removes deleted item from local storage
 function removeItem(item) {
   newResult.splice(item, 1);
 }
@@ -24,24 +24,28 @@ function removeQuizResult(event) {
 function renderResult() {
   newResult = JSON.parse(localStorage.getItem('staffWinner'));
   for(var i = 0; i < newResult.length; i++) {
+    // Create div for results
     var resultWrapper = document.createElement('div');
     resultWrapper.classList.add('resultWrapper');
-
+    // Result title
     var resultTitle = document.createElement('div');
     resultTitle.classList.add('titleWrapper');
-
     var staffName = document.createElement('h2');
+    // Create button to remove results
     var ecks = document.createElement('button');
     ecks.textContent = 'Remove';
     ecks.classList.add('remover');
     ecks.id = i;
+    // Add event listener to each button
     ecks.addEventListener('click', removeQuizResult);
-
+    // Create elements for image and paragraph for result
     var staffImg = document.createElement('img');
     var staffBio = document.createElement('p');
+    // Add content to created elements
     staffName.textContent = newResult[i].name;
     staffImg.src = newResult[i].img;
     staffBio.textContent = newResult[i].bio;
+    // Add elements to the page
     resultsNode.appendChild(resultWrapper);
     resultWrapper.appendChild(resultTitle);
     resultTitle.appendChild(staffName);

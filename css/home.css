@@ -67,12 +67,12 @@ input {
   opacity: 0;
 }
 
-label > input + img{
+label > input + img {
   cursor:pointer;
   border:2px solid transparent;
 }
 
-label > input:checked + img{
+label > input:checked + img {
   background-image: url("../img/metalframe.png");
   background-size: cover;
   background-repeat: no-repeat;
