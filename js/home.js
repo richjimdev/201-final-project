@@ -128,6 +128,7 @@ function render() {
     var suzanneText = document.getElementsByClassName('suzanneText')[i];
     var joannaImg = document.getElementsByClassName('joannaImg')[i];
     var joannaText = document.getElementsByClassName('joannaText')[i];
+    // Assigns correct image and description to correct location
     for(var j = 0; j < qArr[i].qAnswersArr.length; j++) {
       if(qArr[i].qAnswersArr[j].staff === 'Michelle') {
         michelleImg.src = qArr[i].qAnswersArr[j].path;
@@ -163,6 +164,7 @@ var justin = new Staff('Justin', 'img/justin/justin-flexing.gif', 'You march to 
 var joanna = new Staff('Joanna', 'img/joanna/joanna-profile.png', 'You are a social butterfly that can find a friend anywhere!');
 var suzanne = new Staff('Suzanne', 'img/suzanne/suzanne-profile.png', 'The cat is out of the bag, you are the adventurous one!');
 
+// Function to add results to local storage
 function addLocalStorage(name, value) {
   var results = JSON.parse(localStorage.getItem(name));
   if(!results) {
@@ -174,13 +176,13 @@ function addLocalStorage(name, value) {
 
 // Event listener for submit button that will tally answers
 document.getElementById('button').addEventListener('click', function() {
-  // debugger;
   // Variables to keep tally of answers that pertain to Staff member
   var michelleAnswers = 0;
   var justinAnswers = 0;
   var joannaAnswers = 0;
   var suzanneAnswers = 0;
 
+  // Check that tallies up user responses
   for (var i = 0; i <= 8; i++) {
     if(document.getElementsByClassName('michelle')[i].checked) {
       michelleAnswers++;
