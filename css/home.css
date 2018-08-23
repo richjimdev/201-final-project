@@ -5,11 +5,9 @@ main {
 }
 
 .question-bubble {
-  background-image: url("../img/texture.jpg");
+  background-color: rgba(247, 216, 216, 0.322);
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(22, 3, 3, 0.753);
-  background-blend-mode: darken;
   border-radius: 10px;
   padding: 40px;
   box-shadow: 0px 5px 11px -1px rgba(0, 0, 0, 0.678);
@@ -30,6 +28,11 @@ main {
 
 .question-bubble img:hover {
   opacity: 0.75;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: gray;
 }
 
 .quiz-header {
