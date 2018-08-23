@@ -59,8 +59,9 @@ div.titleWrapper {
     padding-top:20px;
 }
 
-a button {
-    margin-left: 45%;
+.retake {
+    display: block;
+    text-align: center;
 }
 
 footer {
