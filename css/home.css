@@ -42,15 +42,29 @@ main {
 }
 
 .header-text {
-  margin-top: 300px;
+  margin-top: 200px;
   color: rgb(236, 218, 218);
-  font-size: 30px;
+  font-size: 40px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.85);
   text-transform: capitalize;
+  opacity: 0;
+  animation-name: title-in;
+  animation-duration: 1.5s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes title-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+  0% {padding-top: 60px;}
+  100% {padding-top: 80px;}
 }
 
 input {
-  display: none;
+  position: absolute;
+  margin: 50px 0px 0px 50px;
+  opacity: 0;
 }
 
 label > input + img{

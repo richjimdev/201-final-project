@@ -24,8 +24,21 @@
   
 #resultExplain h1 {
     font-size: 45px;
-    margin-top: 100px;
-  }
+    margin-top: 20px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.95);
+    opacity: 0;
+    animation-name: title-in;
+    animation-duration: 1.5s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes title-in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    0% {padding-top: 60px;}
+    100% {padding-top: 80px;}
+}
   
 
 h2 {
@@ -52,11 +65,27 @@ div.titleWrapper {
     margin:0 auto;
     width: 400px;
     border-radius: 5%;
-}
+    opacity: 0;
+    animation-name: image-in;
+    animation-duration: 0.75s;
+    animation-delay: 0.25s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes image-in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    0% {width: 500px;}
+    100% {width: 400px;}
+  }
 
 .resultWrapper p {
     font-size: 22px;
     padding-top:20px;
+}
+
+a button {
+    margin-left: 45%;
 }
 
 footer {
