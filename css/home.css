@@ -32,10 +32,6 @@ main {
   opacity: 0.75;
 }
 
-button:hover {
-  cursor: pointer;
-}
-
 .quiz-header {
   background-image: url("../img/ta_4h.jpg");
   width: 960px;
