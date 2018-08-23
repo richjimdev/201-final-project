@@ -5,10 +5,10 @@ var qArr = [];
 
 // Array of text for questions
 var text = [
-  'Which image best describes you?',
+  'Which gif best describes you?',
   'Which city is your perfect vacation destination?',
   'What is your favorite food?',
-  'What do you want to be when you grow up?',
+  'What did you want to be when you grow up?',
   'Who is your favorite band?',
   'What is your perfect weekend activity?',
   'What is your spirit animal?',
