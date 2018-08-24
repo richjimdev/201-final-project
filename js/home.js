@@ -30,6 +30,8 @@ function Questions(text) {
   this.qAnswersArr = [];
 }
 
+Questions.prototype.render = render;
+
 // Creating question objects
 var question1 = new Questions(text[0]);
 var question2 = new Questions(text[1]);
@@ -117,35 +119,34 @@ question9.qAnswersArr.push(answer36);
 
 // Render function: puts things on the page
 function render() {
-  for (var i = 0; i < qArr.length; i++) {
-    var question = document.getElementsByTagName('h2')[i];
-    question.textContent = qArr[i].text;
-    var michelleImg = document.getElementsByClassName('michelleImg')[i];
-    var michelleText = document.getElementsByClassName('michelleText')[i];
-    var justinImg = document.getElementsByClassName('justinImg')[i];
-    var justinText = document.getElementsByClassName('justinText')[i];
-    var suzanneImg = document.getElementsByClassName('suzanneImg')[i];
-    var suzanneText = document.getElementsByClassName('suzanneText')[i];
-    var joannaImg = document.getElementsByClassName('joannaImg')[i];
-    var joannaText = document.getElementsByClassName('joannaText')[i];
-    // Assigns correct image and description to correct location
-    for(var j = 0; j < qArr[i].qAnswersArr.length; j++) {
-      if(qArr[i].qAnswersArr[j].staff === 'Michelle') {
-        michelleImg.src = qArr[i].qAnswersArr[j].path;
-        michelleText.textContent = qArr[i].qAnswersArr[j].descriptor;
-      } else if (qArr[i].qAnswersArr[j].staff === 'Justin') {
-        justinImg.src = qArr[i].qAnswersArr[j].path;
-        justinText.textContent = qArr[i].qAnswersArr[j].descriptor;
-      } else if (qArr[i].qAnswersArr[j].staff === 'Suzanne') {
-        suzanneImg.src = qArr[i].qAnswersArr[j].path;
-        suzanneText.textContent = qArr[i].qAnswersArr[j].descriptor;
-      } else if (qArr[i].qAnswersArr[j].staff === 'Joanna') {
-        joannaImg.src = qArr[i].qAnswersArr[j].path;
-        joannaText.textContent = qArr[i].qAnswersArr[j].descriptor;
-      }
+  var question = document.getElementsByTagName('h2')[i];
+  question.textContent = this.text;
+  var michelleImg = document.getElementsByClassName('michelleImg')[i];
+  var michelleText = document.getElementsByClassName('michelleText')[i];
+  var justinImg = document.getElementsByClassName('justinImg')[i];
+  var justinText = document.getElementsByClassName('justinText')[i];
+  var suzanneImg = document.getElementsByClassName('suzanneImg')[i];
+  var suzanneText = document.getElementsByClassName('suzanneText')[i];
+  var joannaImg = document.getElementsByClassName('joannaImg')[i];
+  var joannaText = document.getElementsByClassName('joannaText')[i];
+  // Assigns correct image and description to correct location
+  for(var j = 0; j < this.qAnswersArr.length; j++) {
+    if(this.qAnswersArr[j].staff === 'Michelle') {
+      michelleImg.src = this.qAnswersArr[j].path;
+      michelleText.textContent = this.qAnswersArr[j].descriptor;
+    } else if (this.qAnswersArr[j].staff === 'Justin') {
+      justinImg.src = this.qAnswersArr[j].path;
+      justinText.textContent = this.qAnswersArr[j].descriptor;
+    } else if (this.qAnswersArr[j].staff === 'Suzanne') {
+      suzanneImg.src = this.qAnswersArr[j].path;
+      suzanneText.textContent = this.qAnswersArr[j].descriptor;
+    } else if (this.qAnswersArr[j].staff === 'Joanna') {
+      joannaImg.src = this.qAnswersArr[j].path;
+      joannaText.textContent = this.qAnswersArr[j].descriptor;
     }
   }
 }
+
 
 // Constructor for staff member object with name, img, bio, then push to staff array
 function Staff(name, img, bio) {
@@ -209,4 +210,6 @@ document.getElementById('button').addEventListener('click', function() {
   location.href = 'results.html';
 });
 
-render();
+for (var i = 0; i < qArr.length; i++) {
+  qArr[i].render();
+}
