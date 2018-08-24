@@ -1,5 +1,12 @@
-# 201-final-project
-201d43 Final project. Richard, Jeremy, Christina, Kris
+# 201-FINAL PROJECT
+201d43 Final project by Richard Jimenez, Jeremy Beck, Kristofer Riedman, Christina Gislason
+
+Project: The Four Horsemen of the  201pocalypse 
+
+Description: This is a quirky, fun quiz that presents a user with nine questions alongside their respective images. The user answers each question and after submitting their answers, they are directed to a results page that displays which CODE 201 staff that they are most matched with. 
+
+Problem Domain: Our quiz allows any code fellow to identify the burning question of which CODE 201 Staff is the equivalent of being their spirit animal.  
+
 
 ## CONFLICT RESOLUTION
 
@@ -80,4 +87,4 @@ We want to create a safe environment where  everyone feels comfortable speaking 
 ## VERSION HISTORY
 
 
-Version 2.0.0 -- Working MVP
+Version 3.0.0 -- Final Working Product
