@@ -30,6 +30,7 @@ function Questions(text) {
   this.qAnswersArr = [];
 }
 
+// Add behavior to Questions objects
 Questions.prototype.render = render;
 
 // Creating question objects
@@ -147,7 +148,6 @@ function render() {
   }
 }
 
-
 // Constructor for staff member object with name, img, bio, then push to staff array
 function Staff(name, img, bio) {
   this.name = name;
@@ -210,6 +210,7 @@ document.getElementById('button').addEventListener('click', function() {
   location.href = 'results.html';
 });
 
+// Invokes render on each question object
 for (var i = 0; i < qArr.length; i++) {
   qArr[i].render();
 }
