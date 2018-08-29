@@ -1,4 +1,6 @@
 # 201-FINAL PROJECT
+
+<!-- It would be nice to include a link here to the deployed version of your site! -->
 201d43 Final project by Richard Jimenez, Jeremy Beck, Kristofer Riedman, Christina Gislason
 
 Project: The Four Horsemen of the  201pocalypse 

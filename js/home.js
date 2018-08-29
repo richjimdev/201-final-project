@@ -17,6 +17,7 @@ var text = [
 ];
 
 // Answers constructor
+// Nitpick: in general, you should use singular words (i.e. Answer) for constructors, not plurals.
 function Answers(descriptor, path, staff) {
   this.descriptor = descriptor;
   this.path = path;
@@ -120,6 +121,47 @@ question9.qAnswersArr.push(answer36);
 
 // Render function: puts things on the page
 function render() {
+  // the fact that you use the i variable from the outer function hurts very much.
+  // My recommendation would be that you do something using template literals instead of using
+  // HTML that's already built into your HTML page.
+  // Something like...
+// var html = `<div class="question-bubble">
+//   <div class="question">
+//     <h2>${this.question}</h2>
+//   </div>
+
+//   <div class="img-row">
+//     <label>
+//       <input type="radio" name="question1" class="${this.qAnswersArr[0].staff}">
+//       <img src="{this.qAnswersArr[0].path}" class="${this.qAnswersArr[0].staff}Img">
+//       <p class="${this.qAnswersArr[0].staff}Text">${this.qAnswersArr[0].descriptor}</p>
+//     </label>
+
+//     <label>
+//       <input type="radio" name="question1" class="{this.qAnswersArr[1].staff}">
+//       <img src="{this.qAnswersArr[1].path}" class="{this.qAnswersArr[1].staff}Img">
+//       <p class="{this.qAnswersArr[1].staff}Text">${this.qAnswersArr[1].descriptor}</p>
+//     </label>
+//   </div>
+
+//   <div class="img-row">
+//     <label>
+//       <input type="radio" name="question1" class="{this.qAnswersArr[2].staff}">
+//       <img src="{this.qAnswersArr[2].path}" class="{this.qAnswersArr[2].staff}Img">
+//       <p class="{this.qAnswersArr[2].staff}Text">${this.qAnswersArr[2].descriptor}</p>
+//     </label>
+
+//     <label>
+//       <input type="radio" name="question1" class="this.qAnswersArr[3].staff">
+//       <img src="{this.qAnswersArr[3].path}" class="this.qAnswersArr[3].staffImg">
+//       <p class="this.qAnswersArr[3].staffText">${this.qAnswersArr[3].descriptor}</p>
+//     </label>
+//   </div>
+// </div>`;
+// var wrapperElt = document.createElement('div');
+// wrapperElt.innerHTML = html;
+// formElt.appendChild(wrapperElt);
+
   var question = document.getElementsByTagName('h2')[i];
   question.textContent = this.text;
   var michelleImg = document.getElementsByClassName('michelleImg')[i];
@@ -160,6 +202,8 @@ function Staff(name, img, bio) {
 var staffArr = [];
 
 // Create staff objects for each staff member
+// I might think about creating this info on the results page, and just saving the name of the staff member in local storage.
+// Also, you don't need the variables for each of these! Can just be 4 lines that start "new Staff..."
 var michelle = new Staff('Michelle', 'img/michelle/michelle-portrait.png', 'You are a coding rockstar that is here to school us all!');
 var justin = new Staff('Justin', 'img/justin/justin-flexing.gif', 'You march to the beat of your own drum, always with a smile on your face.');
 var joanna = new Staff('Joanna', 'img/joanna/joanna-profile.png', 'You are a social butterfly that can find a friend anywhere!');
