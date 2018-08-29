@@ -22,6 +22,7 @@ function removeQuizResult(event) {
 
 // Adds quiz results to the page
 function renderResult() {
+  // You already run this line on page load: no need to load from localStorage twice!
   newResult = JSON.parse(localStorage.getItem('staffWinner'));
   for(var i = 0; i < newResult.length; i++) {
     // Create div for results
